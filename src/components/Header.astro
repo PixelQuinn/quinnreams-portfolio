@@ -1,0 +1,77 @@
+---
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Projects" },
+    { href: "/about", label: "About" },
+    { href: "/resume", label: "Resume" },
+    { href: "/contact", label: "Contact" }
+];
+---
+
+<header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">QUINN REAMS</a>
+
+      <nav class="nav">
+        {navLinks.map((link) => (
+          <a href={link.href} class="nav-link">{link.label}</a>
+        ))}
+      </nav>
+    </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+    color: var(--color-navy);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--color-navy);
+  }
+
+  @media (max-width: 720px) {
+    .header-inner {
+        padding: 1rem 0;
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+  }
+</style>
