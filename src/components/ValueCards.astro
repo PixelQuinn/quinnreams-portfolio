@@ -1,0 +1,103 @@
+---
+const cards = [
+  {
+    title: "Data Analytics",
+    description: "Python, SQL, Excel, and KPI-driven analysis.",
+    tone: "navy"
+  },
+  {
+    title: "Dashboard Solutions",
+    description: "Clear reporting, polished visuals, and decision-ready views.",
+    tone: "blue"
+  },
+  {
+    title: "Storytelling Insights",
+    description: "Business-focused communication that turns analysis into action.",
+    tone: "light"
+  }
+];
+---
+
+<section class="value-strip">
+  <div class="container">
+    <div class="value-grid">
+      {cards.map((card) => (
+        <article class={`value-card ${card.tone}`}>
+          <div class="value-icon" aria-hidden="true"></div>
+          <div>
+            <h2>{card.title}</h2>
+            <p>{card.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .value-strip {
+    background: var(--color-white);
+    padding: 1.5rem 0 3rem;
+  }
+
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .value-card {
+    border-radius: 1rem;
+    padding: 1.25rem 1.25rem 1.15rem;
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(0, 30, 68, 0.14);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    min-height: 124px;
+  }
+
+  .value-card.navy {
+    background: linear-gradient(135deg, var(--color-navy), #16376d);
+  }
+
+  .value-card.blue {
+    background: linear-gradient(135deg, var(--color-blue), #2e5ca5);
+  }
+
+  .value-card.light {
+    background: linear-gradient(135deg, #2c5e9f, #3c87c6);
+  }
+
+  .value-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .value-card h2 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  @media (max-width: 900px) {
+    .value-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .value-strip {
+      padding: 1.25rem 0 2.5rem;
+    }
+  }
+</style>
