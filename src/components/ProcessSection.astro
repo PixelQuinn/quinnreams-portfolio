@@ -1,0 +1,133 @@
+---
+import ProcessSteps from "./ProcessSteps.jsx";
+---
+
+<section class="process-section section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="heading-line"></div>
+      <h2 class="section-title process-title-main">My Process</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <ProcessSteps client:load />
+  </div>
+</section>
+
+<style>
+  .process-section {
+    padding-top: 1rem;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-title-main {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .heading-line {
+    height: 1px;
+    background: var(--color-border);
+    flex: 1;
+  }
+
+  :global(.process-grid) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  :global(.process-item-wrap) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  :global(.process-item) {
+    width: 100%;
+    text-align: left;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.1rem 1rem;
+    box-shadow: 0 12px 28px rgba(0, 30, 68, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    min-height: 130px;
+  }
+
+  :global(.process-item:hover),
+  :global(.process-item.active) {
+    transform: translateY(-2px);
+    border-color: #b8cde5;
+    box-shadow: 0 16px 34px rgba(0, 30, 68, 0.12);
+  }
+
+  :global(.process-number) {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.process-title) {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    line-height: 1.35;
+  }
+
+  :global(.process-blurb) {
+    margin-top: 0.75rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--color-muted);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-height 0.2s ease;
+  }
+
+  :global(.process-blurb.show) {
+    opacity: 1;
+    max-height: 120px;
+  }
+
+  :global(.process-arrow) {
+    font-size: 1.35rem;
+    color: #9fb7d4;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1100px) {
+    :global(.process-grid) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    :global(.process-item-wrap) {
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    :global(.process-grid) {
+      grid-template-columns: 1fr;
+    }
+
+    :global(.process-arrow) {
+      display: none;
+    }
+  }
+</style>
