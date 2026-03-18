@@ -24,14 +24,30 @@ body {
     background: var(--color-white);
 }
 
+body {
+  cursor: default;
+}
+
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-    margin: 0;
+li,
+span,
+div {
+  cursor: default;
+}
+
+a,
+button,
+.btn,
+.nav-link,
+.secondary-link,
+.footer-links a {
+  cursor: pointer;
 }
 
 a {
