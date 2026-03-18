@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Web / SEO Analytics Lab | Quinn Reams"
+  description="A live marketing analytics case study using GA4 and Google Search Console to track engagement, CTA performance, and early SEO visibility on quinnreams.com."
+>
+
+  <!-- HERO -->
+  <section class="case-hero section">
+    <div class="container">
+      <p class="eyebrow">Case Study</p>
+
+      <h1 class="case-title">
+        Web / SEO Analytics Lab
+      </h1>
+
+      <p class="case-subtitle">
+        A live marketing analytics project built on my portfolio site using
+        Google Analytics 4 and Google Search Console to measure engagement,
+        CTA behavior, and early SEO visibility.
+      </p>
+
+      <div class="case-tags">
+        <span>GA4</span>
+        <span>Search Console</span>
+        <span>Web Analytics</span>
+        <span>SEO</span>
+        <span>Event Tracking</span>
+      </div>
+
+      <div class="case-actions">
+
+        <a
+          href="https://github.com/PixelQuinn/web-analytics-lab"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-primary"
+        >
+          View GitHub
+        </a>
+
+        <a
+          href="https://quinnreams.com"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-secondary"
+        >
+          Visit Live Site
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXECUTIVE SUMMARY + PROBLEM -->
+  <section class="section case-section">
+
+    <div class="container case-grid">
+
+      <div class="case-summary">
+
+        <h2 class="section-title">Executive Summary</h2>
+
+        <p>
+          After relaunching my portfolio website, I built a measurement framework
+          to understand how visitors interact with the site and which actions
+          indicate meaningful engagement. This project uses Google Analytics 4
+          and Google Search Console to track traffic sources, engagement
+          behavior, and key calls-to-action such as resume downloads,
+          project exploration, and contact clicks.
+        </p>
+
+        <p>
+          The result is a live analytics lab where the site itself becomes a
+          testing environment for marketing analytics techniques including
+          event tracking, KPI definition, baseline reporting, and SEO
+          monitoring.
+        </p>
+
+      </div>
+
+
+      <div class="case-problem card">
+
+        <h3>Business Problem</h3>
+
+        <ul>
+          <li>Traffic sources were unknown after the portfolio relaunch.</li>
+          <li>Resume downloads, project clicks, and contact actions were not measurable.</li>
+          <li>It was unclear whether visitors explored deeper portfolio content or exited early.</li>
+          <li>No baseline existed for evaluating future SEO or content improvements.</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</BaseLayout>
+
+
+<style>
+
+.case-hero {
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 1rem;
+}
+
+.case-title {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 0.98;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.case-subtitle {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  max-width: 52rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.case-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: #eef4fb;
+  color: var(--color-blue);
+  border: 1px solid #dbe4f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+/* CASE SECTION */
+
+.case-section {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.case-summary {
+  min-width: 0;
+}
+
+.case-summary p {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+  max-width: 46rem;
+}
+
+.case-problem {
+  padding: 1.5rem;
+  align-self: start;
+}
+
+.case-problem h3 {
+  margin: 0 0 1rem 0;
+  color: var(--color-navy);
+  font-size: 1.15rem;
+}
+
+.case-problem ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.case-problem li + li {
+  margin-top: 0.65rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
