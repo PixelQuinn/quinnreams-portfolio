@@ -45,29 +45,30 @@
 
 <style>
   .footer-band {
-    margin-top: 4rem;
+    margin-top: 5rem;
     background: linear-gradient(135deg, var(--color-blue), var(--color-navy));
     color: var(--color-white);
-    padding: 3.5rem 0 3rem;
+    padding: 4.5rem 0 3.75rem;
   }
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1.1fr;
-    gap: 2rem;
+    grid-template-columns: 1.3fr 0.9fr 1.1fr;
+    gap: 3.5rem;
     align-items: start;
   }
 
   .footer-column h2 {
-    font-size: 1.15rem;
-    margin-bottom: 0.9rem;
+    font-size: 1.18rem;
+    margin-bottom: 1.2rem;
     font-weight: 700;
   }
 
   .footer-column p {
-    font-size: 0.96rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
+    max-width: 28rem;
   }
 
   .footer-list {
@@ -75,28 +76,38 @@
     padding: 0;
     margin: 0;
     display: grid;
-    gap: 0.55rem;
+    grid-template-columns: repeat(2, max-content);
+    gap: 0.9rem 2.4rem;
   }
 
   .footer-list li {
-    font-size: 0.96rem;
+    font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.92);
   }
 
   .footer-links {
-    margin-top: 1rem;
+    margin-top: 1.4rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.4rem;
   }
 
   .footer-links a {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     font-weight: 700;
     color: var(--color-white);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 0.15rem;
-    transition: border-color 0.2s ease, opacity 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    border-color: var(--color-white);
+    opacity: 0.95;
+    transform: translateY(-1px);
   }
 
   .footer-links a:hover {
@@ -105,9 +116,9 @@
   }
 
   .site-footer {
-    background: var(--color-navy);
+    background: #001735;
     color: rgba(255, 255, 255, 0.75);
-    padding: 1rem 0;
+    padding: 1.1rem 0;
   }
 
   .site-footer-inner {
@@ -117,7 +128,8 @@
   }
 
   .site-footer-inner p {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
   }
 
   @media (max-width: 900px) {
