@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# Quinn Reams Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Live site: https://quinnreams.com
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This repository contains the source code for my personal portfolio website.  
+The site highlights my work in marketing analytics, data analysis, and dashboard development.
 
-## 🚀 Project Structure
+The goal of this portfolio is to showcase projects that demonstrate how data can be used to answer business questions, measure marketing performance, and deliver clear insights.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Projects Featured
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Web / SEO Analytics Lab
+Using Google Analytics 4 and Google Search Console to track engagement and key actions on my portfolio site.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Focus areas:
+- Traffic sources
+- Engagement metrics
+- Conversion event tracking
+- SEO performance insights
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Marketing Impact Evaluation
+Evaluating whether a marketing change measurably improved conversions using pre/post analysis and program evaluation logic.
 
-## 🧞 Commands
+### Marketing KPI Dashboard
+Building a SQL-first dashboard with clear metric definitions and stakeholder-ready reporting.
 
-All commands are run from the root of the project, from a terminal:
+### CRM / Lifecycle Analytics
+Analyzing cohorts, retention, and segmentation to understand customer lifecycle behavior.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Forecasting for Marketing
+Forecasting traffic, leads, and conversions using baseline models and backtesting.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Tech Stack
+
+- Astro
+- HTML / CSS
+- Tailwind CSS
+- Google Analytics 4
+- Vercel (hosting)
+
+---
+
+## Local Development
+
+Clone the repository and install dependencies.
