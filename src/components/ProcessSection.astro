@@ -54,35 +54,40 @@ import ProcessSteps from "./ProcessSteps.jsx";
   :global(.process-item) {
     width: 100%;
     text-align: left;
-    background: var(--color-white);
+    background: linear-gradient(180deg, #ffffff, #f9fbfe);
     border: 1px solid var(--color-border);
     border-radius: 1rem;
-    padding: 1.1rem 1rem;
+    padding: 1.15rem 1rem;
     box-shadow: 0 12px 28px rgba(0, 30, 68, 0.08);
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease,
+      background 0.22s ease;
     position: relative;
     min-height: 130px;
   }
 
   :global(.process-item:hover),
   :global(.process-item.active) {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     border-color: #b8cde5;
-    box-shadow: 0 16px 34px rgba(0, 30, 68, 0.12);
+    box-shadow: 0 18px 34px rgba(0, 30, 68, 0.12);
+    background: linear-gradient(180deg, #ffffff, #f4f8fd);
   }
 
   :global(.process-number) {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.55rem;
     font-weight: 800;
     color: var(--color-blue);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem;
   }
 
   :global(.process-title) {
     display: block;
-    font-size: 1rem;
+    font-size: 1.03rem;
     font-weight: 700;
     color: var(--color-navy);
     line-height: 1.35;
@@ -105,10 +110,16 @@ import ProcessSteps from "./ProcessSteps.jsx";
   }
 
   :global(.process-arrow) {
-    font-size: 1.35rem;
-    color: #9fb7d4;
+    font-size: 1.2rem;
+    color: #a9bfd9;
     font-weight: 700;
     flex-shrink: 0;
+    transition: transform 0.22s ease, color 0.22s ease;
+  }
+
+  :global(.process-item-wrap:hover .process-arrow) {
+    color: var(--color-blue);
+    transform: translateX(2px);
   }
 
   @media (max-width: 1100px) {
