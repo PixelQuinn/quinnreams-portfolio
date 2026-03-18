@@ -6,15 +6,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   title="Web / SEO Analytics Lab | Quinn Reams"
   description="A live marketing analytics case study using GA4 and Google Search Console to track engagement, CTA performance, and early SEO visibility on quinnreams.com."
 >
-
-  <!-- HERO -->
   <section class="case-hero section">
     <div class="container">
       <p class="eyebrow">Case Study</p>
 
-      <h1 class="case-title">
-        Web / SEO Analytics Lab
-      </h1>
+      <h1 class="case-title">Web / SEO Analytics Lab</h1>
 
       <p class="case-subtitle">
         A live marketing analytics project built on my portfolio site using
@@ -31,7 +27,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
 
       <div class="case-actions">
-
         <a
           href="https://github.com/PixelQuinn/web-analytics-lab"
           target="_blank"
@@ -49,19 +44,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           Visit Live Site
         </a>
-
       </div>
     </div>
   </section>
 
-
-  <!-- EXECUTIVE SUMMARY + PROBLEM -->
   <section class="section case-section">
-
     <div class="container case-grid">
-
       <div class="case-summary">
-
         <h2 class="section-title">Executive Summary</h2>
 
         <p>
@@ -79,325 +68,453 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           event tracking, KPI definition, baseline reporting, and SEO
           monitoring.
         </p>
-
       </div>
 
-
       <div class="case-problem card">
-
         <h3>Business Problem</h3>
-
         <ul>
           <li>Traffic sources were unknown after the portfolio relaunch.</li>
           <li>Resume downloads, project clicks, and contact actions were not measurable.</li>
           <li>It was unclear whether visitors explored deeper portfolio content or exited early.</li>
           <li>No baseline existed for evaluating future SEO or content improvements.</li>
         </ul>
+      </div>
+    </div>
+  </section>
 
+  <section class="section case-section">
+    <div class="container">
+      <h2 class="section-title">Measurement Framework</h2>
+
+      <p class="section-intro">
+        To measure meaningful engagement on the portfolio site, I designed a
+        tracking framework centered around key visitor actions and marketing
+        signals. Events were implemented in Google Analytics 4 and aligned
+        with defined KPIs for evaluating site performance.
+      </p>
+
+      <div class="framework-grid">
+        <div class="framework-card card">
+          <h3>Tracked Events</h3>
+          <ul>
+            <li>Resume downloads</li>
+            <li>Project clicks</li>
+            <li>Contact link clicks</li>
+            <li>Outbound GitHub clicks</li>
+            <li>Scroll depth</li>
+          </ul>
+        </div>
+
+        <div class="framework-card card">
+          <h3>Primary KPIs</h3>
+          <ul>
+            <li>Engaged sessions</li>
+            <li>Average engagement time</li>
+            <li>Resume download rate</li>
+            <li>Project exploration rate</li>
+            <li>Traffic source breakdown</li>
+          </ul>
+        </div>
+
+        <div class="framework-card card">
+          <h3>Data Sources</h3>
+          <ul>
+            <li>Google Analytics 4</li>
+            <li>Google Search Console</li>
+            <li>UTM campaign tracking</li>
+            <li>Custom event instrumentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section">
+    <div class="container">
+      <h2 class="section-title">Tracking Implementation</h2>
+
+      <p class="section-intro">
+        The measurement framework was implemented directly on the live portfolio
+        site using Google Analytics 4 event tracking, structured CTA tagging,
+        and consistent naming conventions for meaningful actions.
+      </p>
+
+      <div class="implementation-grid">
+        <div class="implementation-card card">
+          <h3>CTA Events Tracked</h3>
+          <ul>
+            <li><code>resume_download</code></li>
+            <li><code>email_click</code></li>
+            <li><code>github_click</code></li>
+            <li><code>project_click</code></li>
+          </ul>
+        </div>
+
+        <div class="implementation-card card">
+          <h3>Instrumentation Approach</h3>
+          <p>
+            Key CTA links across the site were given stable identifiers and tracked
+            through shared site logic so event measurement stayed consistent across
+            components and pages.
+          </p>
+        </div>
+
+        <div class="implementation-card card">
+          <h3>Validation</h3>
+          <p>
+            Realtime testing in GA4 confirmed that core custom events fired
+            successfully on the live site after implementation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section">
+    <div class="container">
+      <h2 class="section-title">Baseline Reporting</h2>
+
+      <p class="section-intro">
+        Because this project is still in its early live phase, the first reporting
+        window is treated as a baseline rather than a mature performance review.
+        The goal is to establish a clean starting point for acquisition,
+        engagement, CTA behavior, and future optimization.
+      </p>
+
+      <div class="baseline-grid">
+        <div class="baseline-card card">
+          <h3>Reporting Scope</h3>
+          <ul>
+            <li>Traffic acquisition</li>
+            <li>Top pages and page-level engagement</li>
+            <li>Custom and automatic event counts</li>
+            <li>Early CTA behavior</li>
+          </ul>
+        </div>
+
+        <div class="baseline-card card">
+          <h3>Key Metrics Tracked</h3>
+          <ul>
+            <li>Users</li>
+            <li>Sessions</li>
+            <li>Engaged sessions</li>
+            <li>Engagement rate</li>
+            <li>Resume downloads</li>
+            <li>Email clicks</li>
+            <li>GitHub clicks</li>
+            <li>Project clicks</li>
+          </ul>
+        </div>
+
+        <div class="baseline-card card">
+          <h3>What This Baseline Supports</h3>
+          <ul>
+            <li>Future comparison against new content releases</li>
+            <li>CTA performance analysis by location</li>
+            <li>Homepage-to-project exploration tracking</li>
+            <li>SEO and traffic trend measurement over time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section case-section-tight">
+    <div class="container case-grid">
+      <div class="case-summary">
+        <h2 class="section-title">Current Limitations</h2>
+
+        <p>
+          This project is intentionally being documented during the launch and
+          early data collection phase. Because of that, current findings are
+          directional rather than final.
+        </p>
       </div>
 
+      <div class="case-problem card">
+        <h3>Known Constraints</h3>
+        <ul>
+          <li>Traffic volume is still low in the launch phase.</li>
+          <li>Early data may include some internal testing noise.</li>
+          <li>Search Console visibility data will take time to accumulate.</li>
+          <li>Some deeper project pages are still being expanded.</li>
+        </ul>
+      </div>
     </div>
+  </section>
+
+  <section class="section case-section case-section-tight">
+    <div class="container">
+      <h2 class="section-title">Next Actions</h2>
+
+      <div class="next-actions card">
+        <ul>
+          <li>Continue collecting week 1 baseline data.</li>
+          <li>Add screenshots from GA4 traffic, pages, and events reports.</li>
+          <li>Mark core custom events as GA4 Key Events once fully processed.</li>
+          <li>Compare CTA performance by placement across the site.</li>
+          <li>Add Search Console data as impressions and clicks accumulate.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   </section>
 
-  <!-- Measurement Framework -->
-   <section class="section case-section">
-  <div class="container">
+  <section class="section case-section case-conclusion">
+    <div class="container">
+      <h2 class="section-title">Project Outcome</h2>
 
-    <h2 class="section-title">Measurement Framework</h2>
+      <p class="section-intro">
+        This project transformed the portfolio site into a live analytics
+        environment where marketing measurement techniques can be tested
+        and improved over time.
+      </p>
 
-    <p class="section-intro">
-      To measure meaningful engagement on the portfolio site, I designed a
-      tracking framework centered around key visitor actions and marketing
-      signals. Events were implemented in Google Analytics 4 and aligned
-      with defined KPIs for evaluating site performance.
-    </p>
-
-    <div class="framework-grid">
-
-      <div class="framework-card card">
-        <h3>Tracked Events</h3>
+      <div class="outcome-card card">
         <ul>
-          <li>Resume downloads</li>
-          <li>Project clicks</li>
-          <li>Contact link clicks</li>
-          <li>Outbound GitHub clicks</li>
-          <li>Scroll depth</li>
+          <li>Established a full GA4 measurement framework for site engagement.</li>
+          <li>Implemented consistent CTA event tracking across the portfolio.</li>
+          <li>Created a baseline reporting structure for acquisition and engagement.</li>
+          <li>Connected Search Console data for early SEO visibility tracking.</li>
+          <li>Documented a repeatable analytics workflow for future projects.</li>
         </ul>
       </div>
-
-      <div class="framework-card card">
-        <h3>Primary KPIs</h3>
-        <ul>
-          <li>Engaged sessions</li>
-          <li>Average engagement time</li>
-          <li>Resume download rate</li>
-          <li>Project exploration rate</li>
-          <li>Traffic source breakdown</li>
-        </ul>
-      </div>
-
-      <div class="framework-card card">
-        <h3>Data Sources</h3>
-        <ul>
-          <li>Google Analytics 4</li>
-          <li>Google Search Console</li>
-          <li>UTM campaign tracking</li>
-          <li>Custom event instrumentation</li>
-        </ul>
-      </div>
-
     </div>
-
-  </div>
 </section>
-
-<!-- Tracking Implementation -->
-<section class="section case-section">
-  <div class="container">
-
-    <h2 class="section-title">Tracking Implementation</h2>
-
-    <p class="section-intro">
-      The measurement framework was implemented directly on the live portfolio
-      site using Google Analytics 4 event tracking, structured CTA tagging,
-      and consistent naming conventions for meaningful actions.
-    </p>
-
-    <div class="implementation-grid">
-
-      <div class="implementation-card card">
-        <h3>CTA Events Tracked</h3>
-        <ul>
-          <li><code>resume_download</code></li>
-          <li><code>email_click</code></li>
-          <li><code>github_click</code></li>
-          <li><code>project_click</code></li>
-        </ul>
-      </div>
-
-      <div class="implementation-card card">
-        <h3>Instrumentation Approach</h3>
-        <p>
-          Key CTA links across the site were given stable identifiers and tracked
-          through shared site logic so event measurement stayed consistent across
-          components and pages.
-        </p>
-      </div>
-
-      <div class="implementation-card card">
-        <h3>Validation</h3>
-        <p>
-          Realtime testing in GA4 confirmed that core custom events fired
-          successfully on the live site after implementation.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
 </BaseLayout>
 
-
 <style>
-
-.case-hero {
-  padding-top: 4.5rem;
-  padding-bottom: 3.5rem;
-  background: linear-gradient(180deg, #ffffff, #f8fbff);
-}
-
-.eyebrow {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-blue);
-  margin-bottom: 1rem;
-}
-
-.case-title {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
-  line-height: 0.98;
-  color: var(--color-navy);
-  margin-bottom: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-.case-subtitle {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: var(--color-muted);
-  max-width: 52rem;
-  margin-bottom: 1.5rem;
-}
-
-.case-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
-}
-
-.case-tags span {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  background: #eef4fb;
-  color: var(--color-blue);
-  border: 1px solid #dbe4f0;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.case-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-
-/* CASE SECTION */
-
-.case-section {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-}
-
-.case-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
-  gap: 2.5rem;
-  align-items: start;
-}
-
-.case-summary {
-  min-width: 0;
-}
-
-.case-summary p {
-  margin-top: 1rem;
-  line-height: 1.75;
-  color: var(--color-muted);
-  max-width: 46rem;
-}
-
-.case-problem {
-  padding: 1.5rem;
-  align-self: start;
-}
-
-.case-problem h3 {
-  margin: 0 0 1rem 0;
-  color: var(--color-navy);
-  font-size: 1.15rem;
-}
-
-.case-problem ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  line-height: 1.7;
-  color: var(--color-muted);
-}
-
-.case-problem li + li {
-  margin-top: 0.65rem;
-}
-
-.section-intro {
-  max-width: 48rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-  color: var(--color-muted);
-}
-
-.framework-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
-
-.framework-card {
-  padding: 1.5rem;
-}
-
-.framework-card h3 {
-  margin-bottom: 0.75rem;
-  color: var(--color-navy);
-}
-
-.framework-card ul {
-  padding-left: 1rem;
-  padding-left: 1.2rem;
-  line-height: 1.7;
-  color: var(--color-muted);
-}
-
-.framework-card li + li {
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 900px) {
-  .framework-grid {
-    grid-template-columns: 1fr;
+  .case-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
   }
-}
 
-@media (max-width: 900px) {
+  .eyebrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+  }
+
+  .case-title {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    line-height: 0.98;
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .case-subtitle {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 52rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .case-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    background: #eef4fb;
+    color: var(--color-blue);
+    border: 1px solid #dbe4f0;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .case-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .case-section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .case-section-tight {
+    padding-top: 1rem;
+  }
 
   .case-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
+    gap: 2.5rem;
+    align-items: start;
   }
 
-}
+  .case-summary {
+    min-width: 0;
+  }
 
-.implementation-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
+  .case-summary p {
+    margin-top: 1rem;
+    line-height: 1.75;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
 
-.implementation-card {
-  padding: 1.5rem;
-}
+  .case-problem {
+    padding: 1.5rem;
+    align-self: start;
+  }
 
-.implementation-card h3 {
-  margin-bottom: 0.85rem;
-  color: var(--color-navy);
-}
+  .case-problem h3 {
+    margin: 0 0 1rem 0;
+    color: var(--color-navy);
+    font-size: 1.15rem;
+  }
 
-.implementation-card p {
-  line-height: 1.7;
-  color: var(--color-muted);
-}
+  .case-problem ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
 
-.implementation-card ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  line-height: 1.7;
-  color: var(--color-muted);
-}
+  .case-problem li + li {
+    margin-top: 0.65rem;
+  }
 
-.implementation-card li + li {
-  margin-top: 0.45rem;
-}
+  .section-intro {
+    max-width: 48rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
 
-code {
-  font-family: Consolas, Monaco, monospace;
-  font-size: 0.92em;
-  background: #eef4fb;
-  color: var(--color-blue);
-  padding: 0.12rem 0.35rem;
-  border-radius: 0.35rem;
-}
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
 
-@media (max-width: 900px) {
+  .framework-card {
+    padding: 1.5rem;
+  }
+
+  .framework-card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--color-navy);
+  }
+
+  .framework-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  .framework-card li + li {
+    margin-top: 0.5rem;
+  }
+
   .implementation-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
   }
-}
+
+  .implementation-card {
+    padding: 1.5rem;
+  }
+
+  .implementation-card h3 {
+    margin-bottom: 0.85rem;
+    color: var(--color-navy);
+  }
+
+  .implementation-card p {
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  .implementation-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  .implementation-card li + li {
+    margin-top: 0.45rem;
+  }
+
+  code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.92em;
+    background: #eef4fb;
+    color: var(--color-blue);
+    padding: 0.12rem 0.35rem;
+    border-radius: 0.35rem;
+  }
+
+  .baseline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .baseline-grid > * {
+    height: auto;
+  }
+
+  .baseline-card {
+    padding: 1.5rem;
+    align-self: start;
+  }
+
+  .baseline-card h3 {
+    margin-bottom: 0.85rem;
+    color: var(--color-navy);
+  }
+
+  .baseline-card ul,
+  .next-actions ul,
+  .outcome-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  .baseline-card li + li,
+  .next-actions li + li,
+  .outcome-card li + li {
+    margin-top: 0.45rem;
+  }
+
+  .next-actions {
+    padding: 1.5rem;
+  }
+
+  .outcome-card {
+    padding: 1.75rem;
+    max-width: 52rem;
+  }
+
+  @media (max-width: 900px) {
+    .case-grid,
+    .framework-grid,
+    .implementation-grid,
+    .baseline-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
