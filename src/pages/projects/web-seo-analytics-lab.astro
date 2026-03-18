@@ -152,6 +152,52 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </div>
 </section>
 
+<!-- Tracking Implementation -->
+<section class="section case-section">
+  <div class="container">
+
+    <h2 class="section-title">Tracking Implementation</h2>
+
+    <p class="section-intro">
+      The measurement framework was implemented directly on the live portfolio
+      site using Google Analytics 4 event tracking, structured CTA tagging,
+      and consistent naming conventions for meaningful actions.
+    </p>
+
+    <div class="implementation-grid">
+
+      <div class="implementation-card card">
+        <h3>CTA Events Tracked</h3>
+        <ul>
+          <li><code>resume_download</code></li>
+          <li><code>email_click</code></li>
+          <li><code>github_click</code></li>
+          <li><code>project_click</code></li>
+        </ul>
+      </div>
+
+      <div class="implementation-card card">
+        <h3>Instrumentation Approach</h3>
+        <p>
+          Key CTA links across the site were given stable identifiers and tracked
+          through shared site logic so event measurement stayed consistent across
+          components and pages.
+        </p>
+      </div>
+
+      <div class="implementation-card card">
+        <h3>Validation</h3>
+        <p>
+          Realtime testing in GA4 confirmed that core custom events fired
+          successfully on the live site after implementation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </BaseLayout>
 
 
@@ -309,4 +355,49 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 }
 
+.implementation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.implementation-card {
+  padding: 1.5rem;
+}
+
+.implementation-card h3 {
+  margin-bottom: 0.85rem;
+  color: var(--color-navy);
+}
+
+.implementation-card p {
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.implementation-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.implementation-card li + li {
+  margin-top: 0.45rem;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.92em;
+  background: #eef4fb;
+  color: var(--color-blue);
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .implementation-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
