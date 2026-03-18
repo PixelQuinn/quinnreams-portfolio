@@ -219,6 +219,68 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <section class="section case-section">
+    <div class="container">
+      <h2 class="section-title">Evidence & Reporting Screens</h2>
+
+      <p class="section-intro">
+        The screenshots below document the live instrumentation and early
+        reporting structure used in this project. Because the site is still in
+        its launch phase, these visuals focus on validating event tracking,
+        confirming real-time data collection, and establishing baseline
+        engagement reporting.
+      </p>
+
+      <div class="evidence-grid">
+        <article class="evidence-card card">
+          <img
+            src="/images/analytics-events.png"
+            alt="GA4 event tracking report showing custom events including resume download, email click, github click, and project click"
+          />
+          <div class="evidence-copy">
+            <h3>Custom Event Tracking</h3>
+            <p>
+              Google Analytics 4 event reporting confirms that custom events such as
+              <code>resume_download</code>, <code>email_click</code>,
+              <code>github_click</code>, and <code>project_click</code> are
+              successfully firing on the live site.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidence-card card">
+          <img
+            src="/images/analytics-realtime.png"
+            alt="GA4 realtime analytics showing active users"
+          />
+          <div class="evidence-copy">
+            <h3>Realtime Validation</h3>
+            <p>
+              Realtime monitoring was used during implementation to confirm that
+              tracking scripts and event instrumentation were working correctly
+              on the live production site.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidence-card card">
+          <img
+            src="/images/analytics-pages.png"
+            alt="GA4 page views report showing baseline page engagement"
+          />
+          <div class="evidence-copy">
+            <h3>Baseline Page Engagement</h3>
+            <p>
+              Early reporting highlights which portfolio pages receive the most
+              engagement, establishing a baseline for future content and SEO
+              performance comparisons.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section case-section case-section-tight">
     <div class="container case-grid">
       <div class="case-summary">
@@ -259,8 +321,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  </section>
-
   <section class="section case-section case-conclusion">
     <div class="container">
       <h2 class="section-title">Project Outcome</h2>
@@ -281,7 +341,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </ul>
       </div>
     </div>
-</section>
+  </section>
 </BaseLayout>
 
 <style>
@@ -500,20 +560,51 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     margin-top: 0.45rem;
   }
 
-  .next-actions {
-    padding: 1.5rem;
+  .next-actions,
+  .outcome-card {
+    padding: 1.75rem;
   }
 
   .outcome-card {
-    padding: 1.75rem;
     max-width: 52rem;
+  }
+
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .evidence-card {
+    overflow: hidden;
+  }
+
+  .evidence-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .evidence-copy {
+    padding: 1.25rem;
+  }
+
+  .evidence-copy h3 {
+    margin-bottom: 0.65rem;
+    color: var(--color-navy);
+  }
+
+  .evidence-copy p {
+    line-height: 1.7;
+    color: var(--color-muted);
   }
 
   @media (max-width: 900px) {
     .case-grid,
     .framework-grid,
     .implementation-grid,
-    .baseline-grid {
+    .baseline-grid,
+    .evidence-grid {
       grid-template-columns: 1fr;
     }
   }
