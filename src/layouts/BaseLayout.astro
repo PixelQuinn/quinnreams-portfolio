@@ -3,39 +3,91 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 
 interface Props {
-    title?: string;
-    description?: string;
+  title?: string;
+  description?: string;
 }
 
-const{
-    title = "Quinn Reams | Portfolio",
-    description = "Makreting and data analytics portfolio for Quinn Reams."
+const {
+  title = "Quinn Reams | Portfolio",
+  description = "Marketing and data analytics portfolio for Quinn Reams."
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={description} />
-        <title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PK7HJ2VSZ"></script>
-        <script is:inline>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PK7HJ2VSZ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
 
-        gtag('config', 'G-9PK7HJ2VSZ');
-        </script>
-    </head>
-    <body>
-      <div id="top"></div>
-      <Header />
-      <main>
-        <slot />
-      </main>
-    </body>
+      gtag('js', new Date());
+      gtag('config', 'G-9PK7HJ2VSZ');
+    </script>
+  </head>
+
+  <body>
+    <div id="top"></div>
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <script is:inline>
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+
+        const link = target.closest('a');
+        if (!link) return;
+
+        if (typeof window.gtag !== 'function') return;
+
+        const id = link.id || '';
+
+        if (id === 'hero-resume' || id === 'nav-resume') {
+          window.gtag('event', 'resume_download', {
+            link_id: id,
+            link_url: link.href,
+            cta_location: id === 'hero-resume' ? 'hero' : 'header'
+          });
+          return;
+        }
+
+        if (id === 'hero-email' || id === 'footer-email') {
+          window.gtag('event', 'email_click', {
+            link_id: id,
+            link_url: link.href,
+            cta_location: id === 'hero-email' ? 'hero' : 'footer'
+          });
+          return;
+        }
+
+        if (id === 'footer-github') {
+          window.gtag('event', 'github_click', {
+            link_id: id,
+            link_url: link.href,
+            cta_location: 'footer'
+          });
+          return;
+        }
+
+        if (id === 'featured-web-analytics' || id.startsWith('project-')) {
+          window.gtag('event', 'project_click', {
+            link_id: id,
+            link_url: link.href,
+            cta_location: id === 'featured-web-analytics' ? 'featured' : 'supporting_projects'
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
