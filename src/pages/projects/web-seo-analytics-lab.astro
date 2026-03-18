@@ -100,6 +100,58 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   </section>
 
+  <!-- Measurement Framework -->
+   <section class="section case-section">
+  <div class="container">
+
+    <h2 class="section-title">Measurement Framework</h2>
+
+    <p class="section-intro">
+      To measure meaningful engagement on the portfolio site, I designed a
+      tracking framework centered around key visitor actions and marketing
+      signals. Events were implemented in Google Analytics 4 and aligned
+      with defined KPIs for evaluating site performance.
+    </p>
+
+    <div class="framework-grid">
+
+      <div class="framework-card card">
+        <h3>Tracked Events</h3>
+        <ul>
+          <li>Resume downloads</li>
+          <li>Project clicks</li>
+          <li>Contact link clicks</li>
+          <li>Outbound GitHub clicks</li>
+          <li>Scroll depth</li>
+        </ul>
+      </div>
+
+      <div class="framework-card card">
+        <h3>Primary KPIs</h3>
+        <ul>
+          <li>Engaged sessions</li>
+          <li>Average engagement time</li>
+          <li>Resume download rate</li>
+          <li>Project exploration rate</li>
+          <li>Traffic source breakdown</li>
+        </ul>
+      </div>
+
+      <div class="framework-card card">
+        <h3>Data Sources</h3>
+        <ul>
+          <li>Google Analytics 4</li>
+          <li>Google Search Console</li>
+          <li>UTM campaign tracking</li>
+          <li>Custom event instrumentation</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </BaseLayout>
 
 
@@ -209,8 +261,45 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   margin-top: 0.65rem;
 }
 
+.section-intro {
+  max-width: 48rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
 
-/* MOBILE */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.framework-card {
+  padding: 1.5rem;
+}
+
+.framework-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-navy);
+}
+
+.framework-card ul {
+  padding-left: 1rem;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.framework-card li + li {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 900px) {
 
