@@ -147,6 +147,12 @@ class="featured-projects section">
     gap: 2rem;
     align-items: center;
     box-shadow: 0 20px 40px rgba(0, 30, 68, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 54px rgba(0, 30, 68, 0.24);
   }
 
   .featured-label {
@@ -190,16 +196,24 @@ class="featured-projects section">
     background: rgba(255, 255, 255, 0.12);
     color: var(--color-white);
     border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .featured-card:hover .tag {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.28);
   }
 
   .featured-btn {
     background: var(--color-white);
     color: var(--color-navy);
     border: 1px solid var(--color-white);
-  }
+    transition: transform 0.25s ease, background 0.25s ease;
+}
 
   .featured-btn:hover {
     background: #f2f6fb;
+    transform: translateY(-1px);
   }
 
   .featured-visual {
@@ -216,6 +230,12 @@ class="featured-projects section">
     border-radius: 1.1rem;
     padding: 1rem;
     box-shadow: 0 18px 34px rgba(0, 30, 68, 0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .featured-card:hover .visual-shell {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 44px rgba(0, 30, 68, 0.2);
   }
 
   .visual-topbar {
@@ -327,6 +347,13 @@ class="featured-projects section">
     border: 1px solid var(--color-border);
     border-radius: 1rem;
     box-shadow: 0 14px 30px rgba(0, 30, 68, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .secondary-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0, 30, 68, 0.12);
+    border-color: #c7d9ed;
   }
 
   .secondary-copy {
@@ -346,8 +373,16 @@ class="featured-projects section">
     margin-bottom: 1rem;
   }
 
-  .secondary-tags {
-    margin-bottom: 1rem;
+  .secondary-tag {
+    background: #eef4fb;
+    color: var(--color-blue);
+    border: 1px solid #dbe4f0;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .secondary-card:hover .secondary-tag {
+    background: #e3edf9;
+    border-color: #c8d9ec;
   }
 
   .secondary-tag {
@@ -357,13 +392,31 @@ class="featured-projects section">
   }
 
   .secondary-link {
+    position: relative;
+    display: inline-block;
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--color-blue);
+    transition: color 0.25s ease;
+  }
+
+  .secondary-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--color-blue);
+    transition: width 0.25s ease;
   }
 
   .secondary-link:hover {
     color: var(--color-navy);
+  }
+
+  .secondary-link:hover::after {
+    width: 100%;
   }
 
   @media (max-width: 900px) {
