@@ -16,7 +16,7 @@ const supportingProjects = [
       "Evaluating whether a marketing change measurably improved conversions using pre/post analysis and program evaluation logic.",
     tags: ["Evaluation", "Conversion Analysis", "Dashboard"],
     id: "project-marketing-impact",
-    href: "#projects"
+    href: "https://github.com/PixelQuinn/marketing-impact-lab"
   },
   {
     title: "Marketing KPI Dashboard",
@@ -109,7 +109,12 @@ class="featured-projects section">
               ))}
             </div>
 
-            <a href={project.href} class="secondary-link" id={project.id}>View Project</a>
+            <a href={project.href} 
+               class="secondary-link" 
+               id={project.id}
+               target="_blank"
+               rel="noopener noreferrer"
+            >View Project</a>
           </div>
         </article>
       ))}
